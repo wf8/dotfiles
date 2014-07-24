@@ -4,6 +4,9 @@ set nocompatible
 " hide buffers instead of closing them
 set hidden
 
+" avoid the escape button
+imap jk <Esc>
+
 " unix file format
 set ff=unix
 
@@ -56,7 +59,6 @@ set encoding=utf-8
 " make vim quiet
 set visualbell
 
-" netrw stuff:
 " tree view
 let g:netrw_liststyle=3
 
