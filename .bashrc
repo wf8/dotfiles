@@ -1,11 +1,17 @@
 # vi editing mode
 set -o vi
 
-# details and color when listing files
-alias ls="CLICOLOR_FORCE=1 ls -aoGp"
+# details and color when listing files for mac
+# alias ls="CLICOLOR_FORCE=1 ls -aoGp"
 
-# piping ls through less with color
-alias lsl="CLICOLOR_FORCE=1 ls | less -R"
+# piping ls through less with color for mac
+# alias lsl="CLICOLOR_FORCE=1 ls | less -R"
+
+# details and color when listing files for linux
+alias ls="ls -aoh --color"
+
+# piping ls through less with color for linux
+alias lsl="ls | less -R"
 
 # ordered full details when listing processes
 alias ps="ps aux"
