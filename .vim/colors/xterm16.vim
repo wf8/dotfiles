@@ -19,7 +19,7 @@ let colors_name = 'xterm16'
 " Set cterm colors. Some are set here even though they are equal to their
 " default settings because the GUI settings need to be modified
 
-hi normal	cterm=none	ctermfg=grey		ctermbg=black
+hi normal	cterm=none	ctermfg=grey		ctermbg=none
 
 hi cursor	cterm=none	ctermfg=black		ctermbg=green
 hi diffadd	cterm=none	ctermfg=darkblue	ctermbg=darkgreen
