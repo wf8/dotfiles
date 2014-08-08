@@ -2,19 +2,22 @@
 set -o vi
 
 # details and color when listing files for mac
-# alias ls="CLICOLOR_FORCE=1 ls -aoGp"
+alias ls="CLICOLOR_FORCE=1 ls -aohGp"
 
 # piping ls through less with color for mac
-# alias lsl="CLICOLOR_FORCE=1 ls | less -R"
+alias lsl="CLICOLOR_FORCE=1 ls | less -R"
 
 # details and color when listing files for linux
-alias ls="ls -aoh --color"
+#alias ls="ls -aoh --color"
 
 # piping ls through less with color for linux
-alias lsl="ls | less -R"
+#alias lsl="ls | less -R"
 
 # ordered full details when listing processes
 alias ps="ps aux"
+
+# human readable disk usage
+alias du="du -h"
 
 # set prompt:
 # \[ \] = surrounds non printing characters
