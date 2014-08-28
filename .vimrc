@@ -1,6 +1,10 @@
 " use vim
 set nocompatible
 
+" add filename to tmux tab
+autocmd BufEnter,BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%:t"))
+autocmd VimLeave * call system("tmux rename-window bash"))
+
 " hide buffers instead of closing them
 set hidden
 
