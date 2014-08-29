@@ -2,13 +2,13 @@
 set -o vi
 
 # details and color when listing files for mac
-alias ls="CLICOLOR_FORCE=1 ls -aohGp"
+alias ls="CLICOLOR_FORCE=1 ls -alhGp"
 
 # piping ls through less with color for mac
 alias lsl="CLICOLOR_FORCE=1 ls | less -R"
 
 # details and color when listing files for linux
-#alias ls="ls -aoh --color"
+#alias ls="ls -alh --color"
 
 # piping ls through less with color for linux
 #alias lsl="ls | less -R"
