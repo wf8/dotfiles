@@ -27,3 +27,21 @@ export PS1="\[\e]0;\u@\h: \w\a\]\[\e]0;\u@\h:\w\a\]\[\033[00;33m\]\u@\h\[\033[00
 # export PS1="\[\e[0;31m\][\u@\h:\w]\$\[\e[m\] "
 # export PS1="\[\e[0;31m\]\h:\W \u\$\[\e[m\] "
 
+# method to change tmux window title
+settitle() {
+    printf "\033k$1\033\\"
+}
+
+# change tmux window title for ssh
+ssh() {
+    settitle "$*"
+    command ssh "$@"
+    settitle "bash"
+}
+
+# change tmux window title for htop
+htop() {
+    settitle "htop"
+    command htop "$@"
+    settitle "bash"
+}
