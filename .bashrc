@@ -22,6 +22,9 @@ alias ps="ps aux"
 # human readable disk usage
 alias du="du -h"
 
+# human readable disk free space
+alias df="df -h"
+
 # set prompt:
 # \[ \] = surrounds non printing characters
 export PS1="\[\e]0;\u@\h: \w\a\]\[\e]0;\u@\h:\w\a\]\[\033[00;33m\]\u@\h\[\033[00m\]:\[\033[00;34m\]\w\[\033[00m\]$ "
