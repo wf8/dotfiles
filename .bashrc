@@ -4,17 +4,23 @@ export TERM=xterm-256color
 # vi editing mode
 set -o vi
 
-# details and color when listing files for mac
-#alias ls="CLICOLOR_FORCE=1 ls -alhGp"
+if [ "$(uname)" == "Darwin" ]; then
 
-# piping ls through less with color for mac
-#alias lsl="CLICOLOR_FORCE=1 ls | less -R"
+    # details and color when listing files for mac
+    alias ls="CLICOLOR_FORCE=1 ls -alhGp"
 
-# details and color when listing files for linux
-alias ls="ls -alh --color"
+    # piping ls through less with color for mac
+    alias lsl="CLICOLOR_FORCE=1 ls | less -R"
 
-# piping ls through less with color for linux
-alias lsl="ls | less -R"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+
+    # details and color when listing files for linux
+    alias ls="ls -alh --color"
+
+    # piping ls through less with color for linux
+    alias lsl="ls | less -R"
+
+fi
 
 # ordered full details when listing processes
 alias ps="ps aux"
