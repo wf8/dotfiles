@@ -12,6 +12,8 @@ if [ "$(uname)" == "Darwin" ]; then
     # piping ls through less with color for mac
     alias lsl="CLICOLOR_FORCE=1 ls | less -R"
 
+    alias aliview="open -a /Applications/AliView.app"
+
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 
     # details and color when listing files for linux
@@ -57,3 +59,11 @@ htop() {
     command htop "$@"
     settitle "bash"
 }
+
+if [ "$(uname)" == "Darwin" ]; then
+    PATH="/Users/will/perl5/bin${PATH+:}${PATH}"; export PATH;
+    PERL5LIB="/Users/will/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+    PERL_LOCAL_LIB_ROOT="/Users/will/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+    PERL_MB_OPT="--install_base \"/Users/will/perl5\""; export PERL_MB_OPT;
+    PERL_MM_OPT="INSTALL_BASE=/Users/will/perl5"; export PERL_MM_OPT;
+fi

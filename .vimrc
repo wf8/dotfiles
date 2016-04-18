@@ -1,3 +1,8 @@
+" toggle paste mode
+nnoremap <C-p> :set invpaste paste?<CR>
+set pastetoggle=<C-p>
+set showmode
+
 " use vim
 set nocompatible
 
