@@ -1,5 +1,5 @@
 [user]
-	name = wf
+	name = Will Freyman
 	email = willfreyman@gmail.com
 
 [credential]
@@ -35,3 +35,5 @@
     added = green bold
     changed = yellow bold
     untracked = red
+[core]
+	editor = vim
