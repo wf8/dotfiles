@@ -18,7 +18,7 @@ filetype plugin indent on    " required
 
 " airline status bar settings
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffers_label = 'b'
+let g:airline#extensions#tabline#buffers_label = 'tabs'
 let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#tabline#left_sep = '▶'
 let g:airline#extensions#tabline#left_alt_sep = '>'
@@ -30,10 +30,12 @@ let g:airline_section_warning = ''
 let g:airline_section_z = 'L%l:C%c'
 let g:airline_section_c = ''
 let g:airline#extensions#wordcount#enabled = 0
+let g:airline_theme='minimalist'
+"let g:airline_theme='deus'
 
 " toggle paste mode
-nnoremap <C-p> :set invpaste paste?<CR>
-set pastetoggle=<C-p>
+"nnoremap <C-p> :set invpaste paste?<CR>
+"set pastetoggle=<C-p>
 
 " use vim
 set nocompatible
@@ -128,7 +130,7 @@ function! ToggleVExplorer()
           let cur_win_nr = winnr()
           exec expl_win_num . 'wincmd w'
           close
-          exec cur_win_nr . 'wincmd w'
+          exec cur_win_nr-1 . 'wincmd w'
           unlet t:expl_buf_num
       else
           unlet t:expl_buf_num
