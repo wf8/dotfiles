@@ -30,7 +30,7 @@ let g:airline_section_warning = ''
 let g:airline_section_z = 'L%l:C%c'
 let g:airline_section_c = ''
 let g:airline#extensions#wordcount#enabled = 0
-let g:airline_theme='minimalist'
+let g:airline_theme='wf_minimalist'
 "let g:airline_theme='deus'
 
 " toggle paste mode
