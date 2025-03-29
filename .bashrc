@@ -1,8 +1,12 @@
+# local python venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+. ${HOME}/venv/bin/activate
+
 # ensure 256 colors
 export TERM=xterm-256color
 
 # vi editing mode
-set -o vi
+#set -o vi
 
 if [ "$(uname)" == "Darwin" ]; then
 
@@ -34,10 +38,14 @@ alias du="du -h"
 alias df="df -h"
 
 # set prompt:
-# \[ \] = surrounds non printing characters
-export PS1="\[\e]0;\u@\h: \w\a\]\[\e]0;\u@\h:\w\a\]\[\033[00;33m\]\u@\h\[\033[00m\]:\[\033[00;34m\]\w\[\033[00m\]$ "
 
-# old prompts:
+# zsh prompt
+autoload -U colors
+PS1="%F{yellow}%n@%m:%F{blue}%~$ %F{white}%"
+
+# old bash prompts:
+# \[ \] = surrounds non printing characters
+# export PS1="\[\e]0;\u@\h: \w\a\]\[\e]0;\u@\h:\w\a\]\[\033[00;33m\]\u@\h\[\033[00m\]:\[\033[00;34m\]\w\[\033[00m\]$ "
 # export PS1="\[\e[0;31m\][\u@\h:\w]\$\[\e[m\] "
 # export PS1="\[\e[0;31m\]\h:\W \u\$\[\e[m\] "
 
